@@ -192,8 +192,8 @@ impl SpendValidatingKey {
         <[u8; 32]>::from(&self.0)
     }
 
-    /// Attempts to convert these bytes into a spend validating key 
-    /// from its serialized form, I2LEOSP_256(ak). Returns None if 
+    /// Attempts to convert these bytes into a spend validating key
+    /// from its serialized form, I2LEOSP_256(ak). Returns None if
     /// it can't be created.
     pub fn from_bytes(bytes: &[u8]) -> Option<Self> {
         <[u8; 32]>::try_from(bytes)
