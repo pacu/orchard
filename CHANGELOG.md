@@ -6,6 +6,10 @@ and this project adheres to Rust's notion of
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### changed
+- changed `SpendValidatingKey` serialization and deserialization from bytes
+visibility from `pub(crate)` to `pub`
+  - `orchard::keys::SpendValidatingKey`
 
 ## [0.8.0] - 2024-03-25
 
