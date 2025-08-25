@@ -976,14 +976,13 @@ dependencies = [
 [[package]]
 name = "halo2_gadgets"
 version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "73a5e510d58a07d8ed238a5a8a436fe6c2c79e1bb2611f62688bc65007b4e6e7"
+source = "git+https://github.com/zcash/halo2?rev=2308caf68c48c02468b66cfc452dad54e355e32f#2308caf68c48c02468b66cfc452dad54e355e32f"
 dependencies = [
  "arrayvec",
  "bitvec",
  "ff",
  "group",
- "halo2_poseidon",
+ "halo2_poseidon 0.1.0 (git+https://github.com/zcash/halo2?rev=2308caf68c48c02468b66cfc452dad54e355e32f)",
  "halo2_proofs",
  "lazy_static",
  "pasta_curves",
@@ -1013,15 +1012,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "halo2_poseidon"
+version = "0.1.0"
+source = "git+https://github.com/zcash/halo2?rev=2308caf68c48c02468b66cfc452dad54e355e32f#2308caf68c48c02468b66cfc452dad54e355e32f"
+dependencies = [
+ "bitvec",
+ "ff",
+ "group",
+ "pasta_curves",
+]
+
+[[package]]
 name = "halo2_proofs"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7b867a8d9bbb85fca76fff60652b5cd19b853a1c4d0665cb89bee68b18d2caf0"
+version = "0.3.1"
+source = "git+https://github.com/zcash/halo2?rev=2308caf68c48c02468b66cfc452dad54e355e32f#2308caf68c48c02468b66cfc452dad54e355e32f"
 dependencies = [
  "blake2b_simd",
  "ff",
  "group",
  "halo2_legacy_pdqsort",
+ "indexmap",
  "maybe-rayon",
  "pasta_curves",
  "plotters",
@@ -1449,7 +1459,7 @@ dependencies = [
  "getset",
  "group",
  "halo2_gadgets",
- "halo2_poseidon",
+ "halo2_poseidon 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "halo2_proofs",
  "hex",
  "image",
@@ -1463,6 +1473,7 @@ dependencies = [
  "pprof",
  "proptest",
  "rand",
+ "rand_core",
  "reddsa",
  "serde",
  "shardtree",
@@ -2570,9 +2581,9 @@ dependencies = [
 
 [[package]]
 name = "zcash_note_encryption"
-version = "0.4.0"
+version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5b4580cd6cee12e44421dac43169be8d23791650816bdb34e6ddfa70ac89c1c5"
+checksum = "77efec759c3798b6e4d829fcc762070d9b229b0f13338c40bf993b7b609c2272"
 dependencies = [
  "chacha20",
  "chacha20poly1305",
@@ -2592,9 +2603,9 @@ dependencies = [
 
 [[package]]
 name = "zeroize"
-version = "1.6.0"
+version = "1.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a0956f1ba7c7909bfb66c2e9e4124ab6f6482560f6628b5aaeba39207c9aad9"
+checksum = "ced3678a2879b30306d323f4542626697a464a97c0a07c9aebf7ebca65cd4dde"
 dependencies = [
  "zeroize_derive",
 ]
